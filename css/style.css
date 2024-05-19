@@ -1,0 +1,163 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+/*400*/
+.lexend-deca{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--corNeutra2);
+    line-height: 1.5rem;
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+/*700*/
+.big-shoulders-display{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--corNeutra2);
+    letter-spacing: -0.1rem;
+}
+  
+
+
+
+
+:root{
+    --corPrimaria1: hsl(31, 77%, 52%);
+    --corPrimaria2: hsl(184, 100%, 22%);
+    --corPrimaria3: hsl(179, 100%, 13%);
+
+    --corNeutra1: sla(0, 0%, 100%, 0.75);  /*paragraphs*/
+    --corNeutra2: hsl(0, 0%, 95%);   /*background, headings, buttons)*/
+
+    --font: 15px;
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+    list-style-type: none;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--corNeutra2);
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    margin: calc(var(--font) * 2);
+    border-radius: var(--font);
+    overflow: hidden;
+}
+
+article section{
+    flex: 1;
+    padding: calc(var(--font) * 2);
+    
+}
+section:nth-of-type(1){
+    background-color: var(--corPrimaria1);
+}
+section:nth-of-type(2){
+    background-color: var(--corPrimaria2);
+}
+section:nth-of-type(3){
+    background-color: var(--corPrimaria3);
+}
+
+
+article section img{
+    display: flex;
+    
+    
+}
+article section h1{
+    margin-top: calc(var(--font) * 2);
+    margin-bottom: calc(var(--font) * 2);
+    font-size: calc(var(--font) * 2.2);
+
+}
+
+article section button{
+    border:0;
+    padding: calc(var(--font) * 1);
+    padding-left: calc(var(--font) * 2);
+    padding-right: calc(var(--font) * 2);
+    border-radius: calc(var(--font) * 2);
+    margin-top: calc(var(--font) * 2);
+    
+
+}
+
+article section:nth-of-type(1) > button{
+    color: var(--corPrimaria1);
+}
+article section:nth-of-type(2) >button{
+    color: var(--corPrimaria2);
+}
+
+article section:nth-of-type(3) >button{
+    color: var(--corPrimaria3);
+    border: 1px solid var(--corNeutra2);
+}
+article section button:hover{
+    cursor: pointer;
+}
+
+/*acao de hover ++++++++*/
+
+article section:nth-of-type(1) > button:hover{
+    background-color: var(--corPrimaria1);
+    color: var(--corNeutra2);
+    border: 1px solid var(--corNeutra2);
+}
+article section:nth-of-type(2) >button:hover{
+    background-color:  var(--corPrimaria2);
+    color: var(--corNeutra2);
+    border: 1px solid var(--corNeutra2);
+
+}
+
+article section:nth-of-type(3) >button:hover{
+    background-color:  var(--corPrimaria3);
+    color: var(--corNeutra2);
+    border: 1px solid var(--corNeutra2);
+}
+article section button:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 1160px) {
+    /*acima de 1160px o codigo abaixo é executado*/
+
+    main{
+        height: 100vh;
+        align-items: center;
+    }
+
+    article{
+        flex-direction: row;
+        width: auto;
+    }
+    article section{
+        width: 250px;
+    }
+    article section button{
+        margin-top: calc(var(--font) * 6);
+
+    }
+
+
+
+}   
+
